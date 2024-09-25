@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/global.scss" />
+  </head>
+  <body>
+    <router-root data-root="/">
+      <router-page data-path="./" data-src="src/pages/home.html" />
+      <router-page data-path="./sobre" data-src="src/pages/about.html" />
+      <router-page data-path="/login" data-src="src/pages/login.html" />
+      <router-page data-path="/cadastro" data-src="src/pages/register.html" />
+      <router-page data-path="*" data-src="src/pages/404.html" />
+    </router-root>
+
+    <script src="/lib/scripts/vanilla-router.min.js"></script>
+    <script src="/src/scripts/icons.js" ></script>
+  </body>
+</html>

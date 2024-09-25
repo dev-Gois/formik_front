@@ -1,0 +1,34 @@
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="./src/styles/form.scss">
+    <script type="module" src="./src/components/input/index.js"></script>
+    <script type="module" src="./src/components/submit/index.js"></script>
+</head>
+
+<div class="background">
+    <div class="container">
+        <div class="left-side">
+            <div class="header">
+                <h1>Bem vindo novamente! 👋</h1>
+                <p>Faça login para acessar nossa plataforma</p>
+            </div>
+            <form>
+                <div>
+                    <input-component type="text" id="username" label="Usuário" placeholder="Insira seu usuário" />
+                </div>
+                <div>
+                    <input-component type="password" id="password" label="Senha" placeholder="Insira sua senha" />
+                </div>
+                <div class="submit-container">
+                    <submit-component label="Entrar" />
+                </div>
+            </form>
+            <div class="footer">
+                <p>Não tem uma conta? <a href="./cadastro">Cadastre-se</a></p>
+            </div>
+        </div>
+        <div class="right-side">
+            <img src="./src/assets/images/login.png" alt="Login" />
+        </div>
+    </div>
+</div>

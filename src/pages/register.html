@@ -1,0 +1,37 @@
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="./src/styles/form.scss">
+    <script type="module" src="./src/components/input/index.js"></script>
+    <script type="module" src="./src/components/submit/index.js"></script>
+</head>
+
+<div class="background">
+    <div class="container">
+        <div class="left-side">
+            <div class="header">
+                <h1>Seja muito bem vindo! 🎊</h1>
+                <p>Realize seu cadastro para acessar a nossa plataforma.</p>
+            </div>
+            <form>
+                <div>
+                    <input-component type="text" id="username" label="Usuário" placeholder="Digite um nome de usuário" />
+                </div>
+                <div>
+                    <input-component type="password" id="password" label="Senha" placeholder="Digite uma senha" />
+                </div>
+                <div>
+                    <input-component type="password" id="password" label="Confirme sua senha" placeholder="Confirme sua senha" />
+                </div>
+                <div class="submit-container">
+                    <submit-component label="Entrar" />
+                </div>
+            </form>
+            <div class="footer">
+                <p>Já tem uma conta? <a href="./login">Faça login</a></p>
+            </div>
+        </div>
+        <div class="right-side">
+            <img src="./src/assets/images/register.png" alt="Register" />
+        </div>
+    </div>
+</div>
