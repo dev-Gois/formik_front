@@ -1,5 +1,5 @@
 <head>
-    <title>Home</title>
+    <title>Cadastro</title>
     <link rel="stylesheet" href="./src/styles/form.scss">
     <script type="module" src="./src/components/input/index.js"></script>
     <script type="module" src="./src/components/submit/index.js"></script>
@@ -13,17 +13,44 @@
                 <p>Realize seu cadastro para acessar a nossa plataforma.</p>
             </div>
             <form>
-                <div>
-                    <input-component type="text" id="username" label="Usuário" placeholder="Digite um nome de usuário" />
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <label for="username">Usuário</label>
+                        <input type="text" id="username" placeholder="Digite seu nome de usuário" />
+                    </div>
                 </div>
-                <div>
-                    <input-component type="password" id="password" label="Senha" placeholder="Digite uma senha" />
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" placeholder="Digite sua senha">
+                            <span onclick="togglePassword('password', 'eye-icon')" class="toggle-password">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="eye-icon" class="lucide lucide-eye-off">
+                                    <path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/>
+                                    <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/>
+                                    <path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/>
+                                    <path d="m2 2 20 20"/>
+                                </svg>
+                            </span>
+                        </input>
+                    </div>
                 </div>
-                <div>
-                    <input-component type="password" id="password" label="Confirme sua senha" placeholder="Confirme sua senha" />
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <label for="password">Confirme sua senha</label>
+                        <input type="password" id="confirm-password" placeholder="Confirme sua senha">
+                            <span onclick="togglePassword('confirm-password', 'confirm-eye-icon')" class="toggle-password">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="confirm-eye-icon" class="lucide lucide-eye-off">
+                                    <path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/>
+                                    <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/>
+                                    <path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/>
+                                    <path d="m2 2 20 20"/>
+                                </svg>
+                            </span>
+                        </input>
+                    </div>
                 </div>
                 <div class="submit-container">
-                    <submit-component label="Entrar" />
+                    <button type="submit" class="submit-button">Cadastrar</button>
                 </div>
             </form>
             <div class="footer">
@@ -35,3 +62,6 @@
         </div>
     </div>
 </div>
+<script src="./src/scripts/utils/verify_logged.js"></script> 
+<script src="./src/scripts/utils/toggle_password.js"></script> 
+<script type="module" src="./src/scripts/register.js"></script>
