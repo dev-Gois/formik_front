@@ -1,0 +1,33 @@
+<head>
+    <link rel="stylesheet" href="./src/styles/new_form.scss">
+    <script src="./src/scripts/utils/setupSelectListeners.js"></script>
+    <script src="./src/scripts/functions/addNewOption.js"></script>
+    <script src="./src/scripts/functions/addNewField.js"></script>
+    <script src="./src/scripts/functions/navigate.js"></script>
+</head>
+
+<div class="background">
+    <div class="container">
+        <form id="form">
+            <div class="form-header">
+                <div class="form-title">
+                    <input type="text" id="title" name="title" placeholder="Titulo" required maxlength="200">
+                </div>
+                <div class="form-description">
+                    <textarea id="description" name="description" required placeholder="Descrição"></textarea>
+                </div>
+            </div>
+            <div class="form-content">
+                <div class="button-add-field">
+                    <button type="button" onclick="addNewField()">+</button>
+                </div>
+            </div>
+            <div class="form-footer">
+                <button class="cancel-button" onclick="navigate('/')">Cancelar</button>
+                <button class="submit-button" type="submit">Salvar alterações</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="module" src="./src/scripts/edit_form.js"></script>

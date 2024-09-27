@@ -1,0 +1,47 @@
+<head>
+    <link rel="stylesheet" href="./src/styles/new_form.scss">
+    <script src="./src/scripts/utils/setupSelectListeners.js"></script>
+    <script src="./src/scripts/functions/addNewOption.js"></script>
+    <script src="./src/scripts/functions/addNewField.js"></script>
+    <script src="./src/scripts/functions/navigate.js"></script>
+</head>
+
+<div class="background">
+    <div class="container">
+        <form id="form">
+            <div class="form-header">
+                <div class="form-title">
+                    <input type="text" id="title" name="title" placeholder="Titulo" required maxlength="200">
+                </div>
+                <div class="form-description">
+                    <textarea id="description" name="description" required placeholder="Descrição"></textarea>
+                </div>
+            </div>
+            <div class="form-content">
+                <div class="form-field">
+                    <input type="text" name="field-name" placeholder="Nome do campo">
+                    <select name="field-type-0" class="form-type" id="">
+                        <option value="short_answer">Resposta curta</option>
+                        <option value="long_answer">Parágrafo</option>
+                        <option value="single_choice">Múltipla escolha</option>
+                        <option value="multiple_choice">Caixa de seleção</option>
+                    </select>
+                    <input name="field-option-0" type="text" disabled placeholder="Resposta curta" class="short_answer field-input">
+                    <div class="add-option" onclick="addNewOption(event)" hidden>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                    </div>
+                </div>
+                <div class="button-add-field">
+                    <button type="button" onclick="addNewField()">+</button>
+                </div>
+            </div>
+            <div class="form-footer">
+                <button class="cancel-button" onclick="navigate('/')">Cancelar</button>
+                <button class="submit-button" type="submit">Criar formulário</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="module" src="./src/scripts/utils/verify_local_storage.js"></script>
+<script type="module" src="./src/scripts/new_form.js"></script>

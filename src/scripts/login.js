@@ -1,7 +1,8 @@
 import { api } from "./utils/api";
 import Notify from "simple-notify";
 import 'simple-notify/dist/simple-notify.css'
-  
+import { saveAuthToken } from "./functions/saveAuthToken";
+
 const form = document.querySelector('form');
 
 form.addEventListener('submit', async (e) => {
@@ -17,10 +18,7 @@ form.addEventListener('submit', async (e) => {
       });
   
       if (response.status === 200) {
-          const token = response.data.token;
-          localStorage.setItem('token', token);
-          localStorage.setItem('loginSuccess', true);
-          window.location.href = '/';
+        await saveAuthToken(response.data.token, 'login');
       }
     } catch (error) {
       new Notify({

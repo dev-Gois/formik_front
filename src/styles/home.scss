@@ -1,0 +1,81 @@
+@import '@/styles/vars';
+@import '@/styles/base';
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.plus {
+    position: absolute;
+    left: 97%;
+    top: 2%;
+    background-color: $black;
+    border-radius: 50%;
+    padding: 5px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        stroke: $white;
+    }
+
+    &:hover {
+        background-color: $white;
+
+        svg {
+            stroke: $black;
+        }
+    }
+}
+
+
+.form-card {
+    background-color: darken($white, 5%);
+    box-shadow: 0 0 10px 0 rgba($black, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    max-height: 150px;
+    border-radius: 10px;
+    border: 1px solid $gray;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    h2 {
+        color: $black;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    &:hover {
+        background-color: $white;
+        box-shadow: 0 0 10px 0 rgba($black, 0.2);
+    }
+}
+
+.delete-icon {
+    display: flex;
+    justify-content: flex-end;
+
+    svg {
+        width: 20px;
+        height: 20px;
+        stroke: $black;
+        transition: all 0.3s;
+    }
+
+    &:hover {
+        svg {
+            stroke: $danger;
+        }
+    }
+}
