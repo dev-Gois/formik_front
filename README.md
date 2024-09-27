@@ -13,6 +13,7 @@
    cd formik_front
    ```
 2. Instale as dependencias do projeto usando:
+    ```
    npm i
    ```
 3. Inicie o servidor:
