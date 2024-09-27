@@ -219,3 +219,22 @@
         }
     }
   }
+
+.remove-button {
+    background-color: $danger;
+    color: $white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    max-width: 50px;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+
+    &:hover {
+        background-color: darken($danger, 10%);
+    }
+}
